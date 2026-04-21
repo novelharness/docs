@@ -1,0 +1,22 @@
+agent_id: world_guardian
+agent_name: 世界观守护 Agent
+version: 0.1.0
+config_version: v1
+agent_type: reviewer
+input_contract:
+  required:
+    - trace_id
+    - world_rules
+    - draft_text
+    - state_delta_candidate
+output_contract:
+  schema: output.schema.json
+runtime:
+  model_policy_id: reviewer-strict
+  memory_scope: world
+  timeout_ms: 30000
+  max_retry: 1
+permissions:
+  tools:
+    - world_rule_checker
+  db_write: false

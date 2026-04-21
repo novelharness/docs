@@ -228,7 +228,6 @@ ANY_STEP_FAILED -> COMPENSATING -> FAILED
 
 ---
 
-<<<<<<< codex/expand-and-refine-ai-novel-writing-capabilities-40fows
 ## 9.5 Phase-0 初始化前置工作流（必须先完成）
 
 在 `WF-CHAPTER-ORCHESTRATION-V1` 之前，必须先执行：
@@ -242,8 +241,6 @@ ANY_STEP_FAILED -> COMPENSATING -> FAILED
 
 ---
 
-=======
->>>>>>> main
 ## 10. 与其他 workflow 的关系
 
 你关心“不要拆散”：

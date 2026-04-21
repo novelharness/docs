@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["world_consistency_report", "risk_flags"],
+  "properties": {
+    "world_consistency_report": {
+      "type": "object",
+      "required": ["pass", "violations"],
+      "properties": {
+        "pass": {"type": "boolean"},
+        "violations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

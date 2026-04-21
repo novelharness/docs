@@ -1,0 +1,22 @@
+agent_id: payoff_designer
+agent_name: 爽点设计 Agent
+version: 0.1.0
+config_version: v1
+agent_type: planner
+input_contract:
+  required:
+    - trace_id
+    - chapter_directive
+    - foreshadow_pool
+    - power_system_rules
+output_contract:
+  schema: output.schema.json
+runtime:
+  model_policy_id: planner-creative-safe
+  memory_scope: arc
+  timeout_ms: 40000
+  max_retry: 2
+permissions:
+  tools:
+    - payoff_pattern_lib
+  db_write: false

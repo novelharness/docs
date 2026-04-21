@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["chapter_directive", "risk_flags"],
+  "properties": {
+    "chapter_directive": {
+      "type": "object",
+      "required": ["conflict_type", "payoff_slot", "hook", "cast_ratio"],
+      "properties": {
+        "conflict_type": {"type": "string"},
+        "payoff_slot": {"type": "string"},
+        "hook": {"type": "string"},
+        "cast_ratio": {"type": "string"}
+      }
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

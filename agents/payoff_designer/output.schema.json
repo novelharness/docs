@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["payoff_plan", "risk_flags"],
+  "properties": {
+    "payoff_plan": {
+      "type": "object",
+      "required": ["setup", "trigger", "payoff", "cost"],
+      "properties": {
+        "setup": {"type": "string"},
+        "trigger": {"type": "string"},
+        "payoff": {"type": "string"},
+        "cost": {"type": "string"}
+      }
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

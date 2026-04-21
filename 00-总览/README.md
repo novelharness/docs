@@ -20,11 +20,8 @@
 7. `02-设计/章节工作流输入输出契约.md`
 8. `03-开发/开发防跑偏清单-DoR-DoD.md`
 9. `03-开发/联调验收用例-章节主链路.md`
-<<<<<<< codex/expand-and-refine-ai-novel-writing-capabilities-40fows
 10. `02-设计/Agent规范与角色库（导演-主演-配角-爽点等）.md`
 11. `02-设计/小说初始化阶段设计（世界-势力-角色绑定）.md`
-=======
->>>>>>> main
 
 ## 3. 当前文档分层
 
@@ -40,3 +37,8 @@
 4. **配置中心与运行时分离，配置必须版本化**。
 5. **所有关键动作可追溯、可回滚、可审计**。
 
+
+## 5. 已落地资产目录（开始实现）
+
+- `agents/`：可加载的 Agent 资产（manifest + prompt + output schema）
+- 当前已实现：director、payoff_designer、protagonist、supporting_cast、world_guardian、quality_gate
