@@ -42,6 +42,8 @@ Go 服务是小说平台的**业务主服务**，职责：
 - `GET /api/v1/foreshadows?novel_id=&status=` 伏笔检索
 - `POST /api/v1/tasks` 创建创作任务
 - `PUT /api/v1/tasks/{id}/status` 更新任务状态
+- `POST /api/v1/tasks/{id}/lock` 章节级互斥锁（novel_id + chapter_no）
+- `POST /api/v1/tasks/{id}/unlock` 释放互斥锁
 
 ## 3.4 Runtime 回写接口（重点）
 
@@ -70,8 +72,9 @@ Go 服务是小说平台的**业务主服务**，职责：
 ## 5. 数据一致性策略
 
 1. **章节发布事务**：`chapters + chapter_versions + world_dynamic_snapshots + foreshadows + audit_logs` 同事务。
-2. **幂等键**：`trace_id + action_type` 防止重复提交。
+2. **幂等键**：`trace_id + action_type + step_name` 防止重复执行。
 3. **乐观锁**：动态世界状态使用 `version` 字段避免并发覆盖。
+4. **章节互斥锁**：同一 `novel_id + chapter_no` 只允许一个 workflow 实例进入提交阶段。
 
 ## 6. 安全与权限
 
