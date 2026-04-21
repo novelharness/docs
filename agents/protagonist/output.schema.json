@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": ["protagonist_action_plan", "risk_flags"],
+  "properties": {
+    "protagonist_action_plan": {
+      "type": "object",
+      "required": ["goal", "actions", "dialogue_style"],
+      "properties": {
+        "goal": {"type": "string"},
+        "actions": {"type": "array", "items": {"type": "string"}},
+        "dialogue_style": {"type": "string"}
+      }
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

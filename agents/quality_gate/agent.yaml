@@ -1,0 +1,22 @@
+agent_id: quality_gate
+agent_name: 质量门禁 Agent
+version: 0.1.0
+config_version: v1
+agent_type: reviewer
+input_contract:
+  required:
+    - trace_id
+    - quality_reports
+    - draft_text
+    - thresholds
+output_contract:
+  schema: output.schema.json
+runtime:
+  model_policy_id: reviewer-gate
+  memory_scope: chapter
+  timeout_ms: 25000
+  max_retry: 1
+permissions:
+  tools:
+    - score_aggregator
+  db_write: false

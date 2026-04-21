@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Agent Manifest",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "agent_name",
+    "version",
+    "config_version",
+    "agent_type",
+    "input_contract",
+    "output_contract",
+    "runtime",
+    "permissions"
+  ],
+  "properties": {
+    "agent_id": {"type": "string"},
+    "agent_name": {"type": "string"},
+    "version": {"type": "string"},
+    "config_version": {"type": "string"},
+    "agent_type": {"type": "string", "enum": ["planner", "writer", "reviewer", "simulator"]},
+    "input_contract": {"type": "object"},
+    "output_contract": {"type": "object"},
+    "runtime": {
+      "type": "object",
+      "required": ["model_policy_id", "memory_scope", "timeout_ms", "max_retry"],
+      "properties": {
+        "model_policy_id": {"type": "string"},
+        "memory_scope": {"type": "string", "enum": ["world", "arc", "chapter"]},
+        "timeout_ms": {"type": "integer", "minimum": 1000},
+        "max_retry": {"type": "integer", "minimum": 0}
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "required": ["tools", "db_write"],
+      "properties": {
+        "tools": {"type": "array", "items": {"type": "string"}},
+        "db_write": {"type": "boolean"}
+      }
+    }
+  }
+}

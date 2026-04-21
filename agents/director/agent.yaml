@@ -1,0 +1,25 @@
+agent_id: director
+agent_name: 导演 Agent
+version: 0.1.0
+config_version: v1
+agent_type: planner
+input_contract:
+  required:
+    - trace_id
+    - novel_id
+    - chapter_no
+    - arc_outline
+    - chapter_outline
+    - world_rules
+output_contract:
+  schema: output.schema.json
+runtime:
+  model_policy_id: planner-balanced
+  memory_scope: arc
+  timeout_ms: 45000
+  max_retry: 2
+permissions:
+  tools:
+    - outline_check
+    - conflict_planner
+  db_write: false

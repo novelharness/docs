@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["quality_gate_result", "risk_flags"],
+  "properties": {
+    "quality_gate_result": {
+      "type": "object",
+      "required": ["decision", "scores", "reasons"],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["PASS", "REWRITE_REQUIRED", "REVIEW_REQUIRED"]
+        },
+        "scores": {"type": "object"},
+        "reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

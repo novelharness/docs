@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["supporting_actions", "relationship_delta_candidate", "risk_flags"],
+  "properties": {
+    "supporting_actions": {"type": "array", "items": {"type": "string"}},
+    "relationship_delta_candidate": {"type": "array", "items": {"type": "object"}},
+    "risk_flags": {"type": "array", "items": {"type": "string"}}
+  }
+}

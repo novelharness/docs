@@ -1,0 +1,22 @@
+agent_id: protagonist
+agent_name: 主演 Agent
+version: 0.1.0
+config_version: v1
+agent_type: simulator
+input_contract:
+  required:
+    - trace_id
+    - protagonist_profile
+    - chapter_directive
+    - known_facts
+output_contract:
+  schema: output.schema.json
+runtime:
+  model_policy_id: character-consistent
+  memory_scope: chapter
+  timeout_ms: 35000
+  max_retry: 1
+permissions:
+  tools:
+    - character_memory
+  db_write: false
