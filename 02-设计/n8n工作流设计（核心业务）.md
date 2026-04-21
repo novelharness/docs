@@ -228,6 +228,22 @@ ANY_STEP_FAILED -> COMPENSATING -> FAILED
 
 ---
 
+<<<<<<< codex/expand-and-refine-ai-novel-writing-capabilities-40fows
+## 9.5 Phase-0 初始化前置工作流（必须先完成）
+
+在 `WF-CHAPTER-ORCHESTRATION-V1` 之前，必须先执行：
+
+- `WF-BOOTSTRAP-NOVEL-V1`（初始化世界/势力/角色/伏笔并冻结快照）
+
+前置校验：
+- 存在 `bootstrap_snapshot_version`
+- 主角与核心配角档案完整
+- 势力卡片与主线骨架完整
+
+---
+
+=======
+>>>>>>> main
 ## 10. 与其他 workflow 的关系
 
 你关心“不要拆散”：
