@@ -1,0 +1,9 @@
+skill_id: director_brainstorm
+version: 0.1.0
+description: 导演视角的章节拆解与节奏规划
+inputs:
+  - chapter_brief
+  - world_state
+outputs:
+  - beat_sheet
+  - conflict_focus
