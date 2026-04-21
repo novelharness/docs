@@ -1,0 +1,6 @@
+# Reduce doc merge conflicts for collaborative editing.
+00-总览/README.md merge=union
+02-设计/n8n工作流设计（核心业务）.md merge=union
+02-设计/Agent规范与角色库（导演-主演-配角-爽点等）.md merge=union
+02-设计/小说初始化阶段设计（世界-势力-角色绑定）.md merge=union
+agents/README.md merge=union
