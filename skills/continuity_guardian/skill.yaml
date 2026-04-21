@@ -1,0 +1,9 @@
+skill_id: continuity_guardian
+version: 0.1.0
+description: 连续性守卫技能，检测世界观与角色设定冲突
+inputs:
+  - chapter_draft
+  - canon_facts
+outputs:
+  - continuity_risks
+  - rewrite_suggestions
