@@ -49,3 +49,5 @@ curl -X POST http://localhost:8100/api/v1/chapters/run \
 
 - 参考：`02-设计/n8n-FastGPT-ClaudeCode协同架构设计.md`（回答“平台内 Agent 与自研 Runtime 如何协同”）。
 - 参考：`02-设计/初始化流程-回环重写-长篇状态同步方案.md`（回答 loop、审核打回、200万字状态同步）。
+- 参考：`02-设计/ClaudeCode风格Runtime复用与信息差控制设计.md`（回答“每个Agent是精简版ClaudeCode runtime”）。
+- 参考：`02-设计/ClaudeCode源码复用到Runtime的迁移计划.md`（源码可达后按步骤替换内核）。
